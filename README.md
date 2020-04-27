@@ -19,8 +19,10 @@
     phpMyAdmin Version: 5.0.1       
 
 ### WORKING FOLDERS
-- /app/moodle     (current moodle version 3.8.2 - replace with latest) 
-- /mysql          (if created, docker will create this and store your MySQL data here)
+- /app/moodle     
+    (current moodle version 3.8.2 - replace with latest) 
+- /mysql          
+    (if created, docker will create this and store your MySQL data here)
 
 ### Moodledata
 - path: ```/var/www/moodledata```
