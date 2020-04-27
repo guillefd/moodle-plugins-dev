@@ -1,5 +1,5 @@
 
-# DEV
+# MOODLE DEVELOPMENT 
 - http://localhost/moodle
 - http://localhost/phpmyadmin  
     user: admin   
@@ -10,18 +10,17 @@
     Data Directory: ```/var/www/moodledata```
 
 ## DOCKER IMAGE
-Based on https://hub.docker.com/r/mattrayner/lamp  
-OS: Ubuntu 16.04.6 LTS  
-Apache/2.4.18 (Ubuntu)  
-Database client version: libmysql - mysqlnd 7.4.3  
-PHP version: 7.4.3 (default)  
-MySQL Version: 5.7.29-0ubuntu0.16.04.1-log  
-phpMyAdmin Version: 5.0.1       
+    Based on https://hub.docker.com/r/mattrayner/lamp  
+    OS: Ubuntu 16.04.6 LTS  
+    Apache/2.4.18 (Ubuntu)  
+    Database client version: libmysql - mysqlnd 7.4.3  
+    PHP version: 7.4.3 (default)  
+    MySQL Version: 5.7.29-0ubuntu0.16.04.1-log  
+    phpMyAdmin Version: 5.0.1       
 
-### Sync Content
-- /app            (your PHP files live here)
-- /app/moodle     (moodle 3.8.2 - replace with latest) 
-- /mysql          (docker will create this and store your MySQL data here)
+### WORKING FOLDERS
+- /app/moodle     (current moodle version 3.8.2 - replace with latest) 
+- /mysql          (if created, docker will create this and store your MySQL data here)
 
 ### Moodledata
 - path: ```/var/www/moodledata```
