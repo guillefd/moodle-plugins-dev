@@ -1,5 +1,5 @@
 
-# MOODLE DEVELOPMENT 
+# Docker for Moodle Development
 - http://localhost/moodle
 - http://localhost/phpmyadmin  
     user: admin   
