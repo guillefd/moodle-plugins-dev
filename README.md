@@ -54,23 +54,29 @@ phpMyAdmin Version: 5.0.1
     ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1604```
 > Option without mysql folder synced  
     ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1604```  
+
 // wait docker to complete  
     check ```$ docker container ls --all```  
+
 // setup moodledata  
     ```$ docker exec -it moodledev1 /bin/bash```  
     ```root# mkdir /var/www/moodledata```  
     ```root# chmod 777 /var/www/moodledata```  
     ```root# ls -alh /var/www```  
+
 // get mysql credentials  
     ```docker logs moodledev1```  
+
 // install missing extensions  
     ```$ apt update```  
     ```$ apt-get upgrade```  
     ```$ apt install php7.4-intl php7.4-xmlrpc php7.4-soap```  
     ```$ service apache2 restart```  
+
 // add PHP 7.2    
 ```$ apt-get install php7.2 php7.2-cli php7.2-common```    
 ```$ apt-get install php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-intl php7.2-mysql php7.2-xml php7.2-zip php7.2-xmlrpc php7.2-soap```  
+
 // add PHP 7.3  
 ```$ apt-get install php7.3 php7.3-cli php7.3-common```    
 ```$ apt-get install php7.3-curl php7.3-gd php7.3-json php7.3-mbstring php7.3-intl php7.3-mysql php7.3-xml php7.3-zip php7.3-xmlrpc php7.3-soap```  
