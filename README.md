@@ -53,7 +53,7 @@ phpMyAdmin Version: 5.0.1
 // run  
 > Option with mysql folder synced  
     ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1604```  
-    
+
 > Option without mysql folder synced  
     ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1604```  
 
@@ -67,7 +67,7 @@ phpMyAdmin Version: 5.0.1
     ```root# ls -alh /var/www```  
 
 // get mysql credentials  
-    ```docker logs moodledev1```  
+    ```$ docker logs moodledev1```  
 
 // install missing extensions  
     ```$ apt update```  
@@ -84,6 +84,8 @@ phpMyAdmin Version: 5.0.1
 ```$ apt-get install php7.3-curl php7.3-gd php7.3-json php7.3-mbstring php7.3-intl php7.3-mysql php7.3-xml php7.3-zip php7.3-xmlrpc php7.3-soap```  
 
 // change PHP version  
+> *example: from 7.4 to 7.2*    
+
 ```$ a2dismod php7.4```  
 ```$ a2enmod php7.2```  
 ```$ service apache2 restart```    
