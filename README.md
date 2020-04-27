@@ -49,7 +49,8 @@
     ```root# update-alternatives --set php /usr/bin/php7.3```
 
 # Install 
-**Launch docker image and setup**
+**Launch Docker image and manual setup steps**  
+(this can be added on the config files)
 
 **run**
 > Option with mysql folder synced  
