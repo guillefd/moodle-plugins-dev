@@ -49,9 +49,11 @@ phpMyAdmin Version: 5.0.1
 
 # INSTALL 
 **Launch docker image and setup**
-// run
+
+// run  
 > Option with mysql folder synced  
-    ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1604```
+    ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1604```  
+    
 > Option without mysql folder synced  
     ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1604```  
 
