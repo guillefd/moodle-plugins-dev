@@ -33,13 +33,13 @@
 ```$ docker container ls --all```
 
 > stop container  
-```$ docker container stop moodledev1```
+```$ docker container stop moodledev0```
 
 > remove container  
 ```$ docker container prune```
 
 > connect ssh  
-```$ docker exec -it moodledev1 /bin/bash```
+```$ docker exec -it moodledev0 /bin/bash```
 
 > change PHP version
     // connect ssh  
@@ -54,22 +54,22 @@
 
 **Run**
 > Option with mysql folder synced  
-    ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1604```  
+    ```$ docker run --name "moodledev0" -d -i -t -p "80:80" -v ${PWD}/app:/app -v ${PWD}/mysql:/var/lib/mysql mattrayner/lamp:latest-1604```  
 
 > Option without mysql folder synced  
-    ```$ docker run --name "moodledev1" -d -i -t -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1604```  
+    ```$ docker run --name "moodledev0" -d -i -t -p "80:80" -v ${PWD}/app:/app mattrayner/lamp:latest-1604```  
 
 **Wait Docker to complete**  
     check ```$ docker container ls --all```  
 
 **Setup moodledata**  
-    ```$ docker exec -it moodledev1 /bin/bash```  
+    ```$ docker exec -it moodledev0 /bin/bash```  
     ```root# mkdir /var/www/moodledata```  
     ```root# chmod 777 /var/www/moodledata```  
     ```root# ls -alh /var/www```  
 
 **Get mysql credentials**  
-    ```$ docker logs moodledev1```  
+    ```$ docker logs moodledev0```  
 
 **Install missing extensions**  
     ```$ apt update```  
