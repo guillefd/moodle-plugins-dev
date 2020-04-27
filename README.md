@@ -68,18 +68,16 @@ $ docker exec -it moodledev1 /bin/bash
     $ apt install php7.4-intl php7.4-xmlrpc php7.4-soap
     $ service apache2 restart
 
-    // add PHP 7.2
-        apt-get install php7.2 php7.2-cli php7.2-common
-        apt-get install php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-intl php7.2-mysql php7.2-xml php7.2-zip php7.2-xmlrpc php7.2-soap
+    // add PHP 7.2  
+    $ apt-get install php7.2 php7.2-cli php7.2-common  
+    $ apt-get install php7.2-curl php7.2-gd php7.2-json php7.2-mbstring php7.2-intl php7.2-mysql php7.2-xml php7.2-zip php7.2-xmlrpc php7.2-soap
 
-    // add PHP 7.3
-        apt-get install php7.3 php7.3-cli php7.3-common
-        apt-get install php7.3-curl php7.3-gd php7.3-json php7.3-mbstring php7.3-intl php7.3-mysql php7.3-xml php7.3-zip php7.3-xmlrpc php7.3-soap
+    // add PHP 7.3  
+    $ apt-get install php7.3 php7.3-cli php7.3-common  
+    $ apt-get install php7.3-curl php7.3-gd php7.3-json php7.3-mbstring php7.3-intl php7.3-mysql php7.3-xml php7.3-zip php7.3-xmlrpc php7.3-soap
 
     // change PHP version
-        a2dismod php7.2
-        a2enmod php7.3
-        service apache2 restart
-        update-alternatives --set php /usr/bin/php7.3
-
-
+    $ a2dismod php7.4  
+    $ a2enmod php7.2  
+    $ service apache2 restart  
+    $ update-alternatives --set php /usr/bin/php7.2
